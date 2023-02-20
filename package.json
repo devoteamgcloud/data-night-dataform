@@ -1,0 +1,6 @@
+{
+  "name": "data-night",
+  "dependencies": {
+    "@dataform/core": "2.0.1"
+  }
+}
