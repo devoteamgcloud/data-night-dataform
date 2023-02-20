@@ -2,7 +2,7 @@
   "defaultSchema": "dataform",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
-  "defaultDatabase": "kaan-sandbox",
+  "defaultDatabase": "[your-project-id]",
   "defaultLocation": "EU"
 }
     
