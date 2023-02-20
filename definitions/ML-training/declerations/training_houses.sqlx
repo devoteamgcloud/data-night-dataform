@@ -1,6 +1,7 @@
 -- Config blocks allow you to configure, document, and test your data assets.
 config {
   type: "declaration", // Creates a view in BigQuery. Try changing to "table" instead.
+  database: "data-night-2023-bigquery",
   schema: "training_data",
   name: "houses"
 }
