@@ -27,6 +27,7 @@ House & Sales data are in bigquery.
 8. Verify the project structure as shown:
 
 ![image](https://github.com/devoteamgcloud/data-night-dataform/blob/main/pics/folder-structure.jpg?raw=true)
+
 9. Adjust dataform.json file (enter your project id)
 10. Review the transformations
 11. Apply transformations  (sql statements in Dataform) through **Start Execution** button - *All actions*
