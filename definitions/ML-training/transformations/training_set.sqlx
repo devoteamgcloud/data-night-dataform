@@ -1,7 +1,7 @@
 config {
     type: "table",
-    schema: "ML_house_prices",
-    name: "training_set"
+    schema: "ML_house_prices", //This will be your dataset
+    name: "training_set" //This will be your table
 }
 /*
 DECLARE validation_size INT64 DEFAULT 60;

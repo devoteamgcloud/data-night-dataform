@@ -11,7 +11,7 @@ House & Sales data are in bigquery.
 * 
 ## Steps
 1. Go to Bigquery -> Dataform in console
-2. Create a repository (data-night, europe-west1)
+2. Create a repository (ID: data-night, Region: europe-west1)
 3. Link repository to [github](https://github.com/devoteamgcloud/data-night-dataform)
 * In github: Copy the clone link
 * In Dataform: Launch your repo, Go to "Settings" tab.
@@ -19,7 +19,7 @@ House & Sales data are in bigquery.
 * Paste the copied link (Github repo Url)
 * Default branch name "main"
 * Enter Secret Resource ID: `projects/376282389739/secrets/dataform-github-access`
-4. Create a workspace *(equivalent to personal branch as well)*
+4. Create a workspace (ID: [your-project-id]) *-equivalent to personal branch as well-*
 5. Adjust dataform.json
 6. Confirm & Apply transformations  (sql statements in Dataform)
 7. View the outcome in Bigquery
