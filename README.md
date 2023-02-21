@@ -22,8 +22,8 @@ House & Sales data are in bigquery.
 4. Create a workspace (ID: [your-project-id]) *-equivalent to personal branch as well-*
 5. Adjust dataform.json
 6. Confirm & Apply transformations  (sql statements in Dataform)
-7. View the outcome in Bigquery
-8. Analyze in Looker Studio
-9. 
-
-
+7. View the execution details (pops up at the bottom once you run the workflow)
+8. Go to SQL Workspace tab of the BigQuery (left pane)
+9. View the new dataset & tables in Bigquery `ML-house-prices`
+10. Analyze in Looker Studio *optional*
+11. 
