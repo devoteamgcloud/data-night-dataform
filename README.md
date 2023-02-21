@@ -24,7 +24,8 @@ House & Sales data are in bigquery.
 5. Go to **Development Workspaces** tab in your repo
 6. Create a workspace (ID: [your-project-id]) *-equivalent to personal branch as well-*
 7. Click & launch the workspace
-8. Verify the project structure
+8. Verify the project structure as shown:
+
 ![image](https://github.com/devoteamgcloud/data-night-dataform/blob/main/pics/folder-structure.jpg?raw=true)
 9. Adjust dataform.json file (enter your project id)
 10. Review the transformations
