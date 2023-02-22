@@ -5,10 +5,10 @@ Dataform project repository designed for Data Night - Feb 2023
 This document contains instructions to process house-prices data, analyze & prepare for Machine Learning session.
 House & Sales data are in bigquery. 
 ## Objectives
-:dart: Access to DataForm repository in github
-:dart: Extract data from Bigquery project
-:dart: Apply transformations through DataForm service & Load into personal project Bigquery
-:dart: (optional) Analyze through Looker Studio
+:dart: Access to DataForm repository in github \
+:dart: Extract data from Bigquery project \
+:dart: Apply transformations through DataForm service & Load into personal project Bigquery \
+:dart: (optional) Analyze through Looker Studio 
 
 ## Steps
 1. Go to Bigquery -> Dataform in console
