@@ -12,4 +12,4 @@ DECLARE dataset_size INT64 DEFAULT (
 */
 SELECT *
 FROM ${ref("training_data", "house-sales-all")}
-WHERE CAST(houseID AS integer) > 1400 --dataset_size-validation_size
+WHERE CAST(id AS integer) > 1400 --dataset_size-validation_size

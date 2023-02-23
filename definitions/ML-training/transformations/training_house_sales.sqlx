@@ -58,4 +58,4 @@ WITH
         FROM training_clean
     )
 
-SELECT * EXCEPT(id) FROM training_casted
+SELECT * EXCEPT(houseID) FROM training_casted
