@@ -25,10 +25,10 @@ WITH
 
     ),
     training_clean as (
-        SELECT 
+        SELECT * REPLACE(
             id as houseID,
             ${ convert_null("LotFrontage") },
-            ${ convert_null("MasVnrType") },
+            ${ convert_null("MasVnrType") }, 
             ${ convert_null("MasVnrArea") },
             ${ convert_null("BsmtQual") },
             ${ convert_null("BsmtCond") },
@@ -45,8 +45,16 @@ WITH
             ${ convert_null("PoolQC") },
             ${ convert_null("Fence") },
             ${ convert_null("MiscFeature") },
-            ${ convert_null("Alley") },
-            * EXCEPT(LotFrontage, MasVnrType, MasVnrArea, BsmtQual, BsmtCond, BsmtExposure, BsmtFinType1, BsmtFinType2, Electrical, FireplaceQu, GarageType, GarageYrBlt, GarageFinish, GarageQual, GarageCond, PoolQC, Fence, MiscFeature, Alley, houseID)
+            ${ convert_null("Alley") }
+        )
         FROM training_joint
+    ),
+
+    training_casted as (
+        SELECT * REPLACE(
+            cast( LotFrontage  as integer) as LotFrontage,
+            cast( MasVnrArea as integer) as MasVnrArea
+        )
+        FROM training_clean
     )
-SELECT * FROM training_clean
+SELECT * FROM training_casted
