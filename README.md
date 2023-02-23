@@ -35,13 +35,15 @@ House & Sales data are in bigquery.
 13. Go to SQL Workspace tab of the BigQuery (left pane)
 14. View the new dataset & tables in Bigquery `ML-house-prices`
 15. (Optional) We should convert some fields from string to numeric data-types:
-* 15.1. Here is a sql statement that casts a field as integer, then converts feet square into meter square:\
-`js { function convert_feet_square_to_meter(field) {
+* 15.1. Here is a sql statement that casts a field as integer, then converts feet square into meter square:
+```
+js { function convert_feet_square_to_meter(field) {
     return `
     cast (${field} as integer) * 0.092903 as ${field}
     `;
 }
-}`
+}
+```
 * 15.2. Copy this function into definitions/transformations/training_house_sales.sqlx **Before the sql statements (ie. after line 15)** as a macro
 * 15.3. Call the function within *training_casted* statement. Example:
 `${convert_feet_square_to_meter("LotFrontage")},
