@@ -34,10 +34,24 @@ House & Sales data are in bigquery.
 12. View the execution details (pops up at the bottom once you run the workflow)
 13. Go to SQL Workspace tab of the BigQuery (left pane)
 14. View the new dataset & tables in Bigquery `ML-house-prices`
-15. (Optional) Analyze in Looker Studio:
-* 15.1. Find the ML_house_prices.training_set table in Bigquery sql workspace & click
-* 15.2. Click on **Export** then Explore with Looker Studio
-* 15.3. Try to visualize the data
+15. (Optional) We should convert some fields from string to numeric data-types:
+* 15.1. Here is a sql statement that casts a field as integer, then converts feet square into meter square:\
+`js { function convert_feet_square_to_meter(field) {
+    return `
+    cast (${field} as integer) * 0.092903 as ${field}
+    `;
+}
+}`
+* 15.2. Copy this function into definitions/transformations/training_house_sales.sqlx **Before the sql statements (ie. after line 15)** as a macro
+* 15.3. Call the function within *training_casted* statement. Example:
+`${convert_feet_square_to_meter("LotFrontage")},
+${convert_feet_square_to_meter("MasVnrArea")}`
+* 15.4. If it's compiled successfully, reexecute the 
+
+16. (Optional) Analyze in Looker Studio:
+* 16.1. Find the ML_house_prices.training_set table in Bigquery sql workspace & click
+* 16.2. Click on **Export** then Explore with Looker Studio
+* 16.3. Try to visualize the data
 
 ## Scenario Review
 ![scenario](https://github.com/devoteamgcloud/data-night-dataform/blob/main/pics/scenario.jpg)
